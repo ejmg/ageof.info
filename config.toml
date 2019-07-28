@@ -54,9 +54,13 @@ center = false
 #     readOtherPosts = "Read other posts"'
 
     # [languages.en.params.logo]
-      logoText = "https://ageof.info"
-      # logoHomeLink = "/"
+logo_text = "ageof.info"
+logo_home_link = "/"
 
+main_menu = [
+              {url="$BASE_URL/about", name="About"},
+              {url="$BASE_URL/contact", name="Contact"},
+]
     # [languages.en.menu]
     #   [[languages.en.menu.main]]
     #     identifier = "about"
