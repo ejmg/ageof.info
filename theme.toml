@@ -1,5 +1,5 @@
 name = "terminal"
-description = "a zola theme based on Radek Kozieł's terminal theme for Hugo"
+description = "a minimalist and old-school zola theme based on Radek Kozieł's theme for Hugo"
 license = "MIT"
 homepage = "https://github.com/ejmg/zola-theme-terminal"
 # The minimum version of Zola required
