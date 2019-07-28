@@ -1,13 +1,17 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-<!-- 
-     *TODO*
-     
-     Would be very nice to get this level of behavior using tera templates, but moving on for now.
-     <meta name="description" content="{{ if .IsHome }}{{ .Site.Params.Subtitle }}{{ else }}{{ .Summary | plainify }}{{ end }}"/> 
--->
-<<meta name="description" content="{{ config.description }}"/>
+<meta name="description" content="{{ config.description }}"/>
+
+{#
+
+*TODO*
+---------------------------------------------------------
+
+Would be very nice to get this level of behavior using tera templates, but moving on for now.
+<meta name="description" content="{{ if .IsHome }}{{ .Site.Params.Subtitle }}{{ else }}{{ .Summary | plainify }}{{ end }}"/> 
+#}
+
 
 <!-- Theme CSS -->
 <link rel="stylesheet" href="{{ get_url(path="style.css") }}">
@@ -16,11 +20,30 @@
 <link rel="stylesheet" href="{{ get_url(path=color) }}">
 {% endif %}
 
-<!-- 
-     *TODO* 
+{#
 
-     Custom CSS to override theme properties (/static/style.css)
-     {{ if (fileExists "static/style.css") -}}
-     <link rel="stylesheet" href="{{ "style.css" | absURL }}">
-     {{- end }}
--->
+*TODO* 
+---------------------------------------------------------
+
+Custom CSS to override theme properties (/static/style.css)
+{{ if (fileExists "static/style.css") -}}
+<link rel="stylesheet" href="{{ "style.css" | absURL }}">
+{{- end }}
+
+
+<!-- Icons -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ "img/apple-touch-icon-144-precomposed.png" | absURL }}">
+{{ if isset $.Site.Params "favicon" }}
+<link rel="shortcut icon" href="{{ $.Site.Params.favicon | absURL }}">
+{{ else }}
+<link rel="shortcut icon" href="{{ printf "img/favicon/%s.png" $.Site.Params.ThemeColor | absURL }}">
+{{ end }}
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="{{ if .IsHome }}{{ $.Site.Title }} — {{ $.Site.Params.Subtitle }}{{ else }}{{ .Title }} :: {{ $.Site.Title }} — {{ $.Site.Params.Subtitle }}{{ end }}" />
+<meta name="twitter:description" content="{{ if .IsHome }}{{ $.Site.Params.tagline }}{{ else }}{{ .Summary | plainify }}{{ end }}" />
+<meta name="twitter:site" content="{{ $.Site.BaseURL }}" />
+<meta name="twitter:creator" content="{{ .Params.Author }}" />
+<meta name="twitter:image" content="{{ with .Params.Cover }}{{ . | absURL }}{{ end }}">
+#}

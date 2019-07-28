@@ -1,13 +1,38 @@
 <!DOCTYPE html>
 <html lang="{{ config.default_language }}">
     <head>
-        
+        {%- block header %}
         <title>{{ config.title }}</title>
-        <meta charset="UTF-8"> 
-        <script type="text/javascript" src=""></script>
-        <link rel="stylesheet" href="" type="text/css" media="screen" />
+        {%- endblock header -%}
+
+        {% include "snippets/head.html" -%}
     </head>
     <body>
-        
+        {#
+        "container full" when width == True, regardless of center
+        "container center" when only center == True
+        "container" when both false.
+        #}
+        {% if config.extra.full_width -%}
+          {% set container = "container full" -%}
+        {% elif config.extra.center -%}
+          {% set container = "container center" -%}
+        {% else -%}
+          {% set container = "container" -%}
+        {% endif -%}
+
+        <div class="{{ container }}">
+            
+            {% include "snippets/header.html" -%}
+
+            <div class="content">
+                {% block main -%}
+                {% endblock main -%}
+            </div>
+
+            {% block footer -%}
+              {% include "snippets/footer.html" -%}
+            {% endblock footer -%}
+        </div>
     </body>
 </html>

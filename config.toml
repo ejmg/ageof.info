@@ -31,15 +31,15 @@ build_search_index = true
 # [params]
 
 # dir name of your blog content (default is `content/posts`)
-contentTypeName = "posts"
+content_type_name = "posts"
 # ["orange", "blue", "red", "green", "pink"]
 theme_color = "orange"
 # if you set this to 0, only submenu trigger will be visible
-showMenuItems = 2
+show_menu_items = 2
 # set theme to full screen width
-fullWidthTheme = false
+full_width = false
 # center theme with default width
-centerTheme = false
+center = false
 # set a custom favicon (default is a `themeColor` square)
 # favicon = "favicon.ico"
 
