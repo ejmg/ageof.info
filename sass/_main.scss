@@ -17,7 +17,7 @@ body {
   background-color: color-mod(var(--accent) blend(#1D1E28 98%));
   color: var(--color);
   text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
+  // -webkit-font-smoothing: antialiased; Seems that it is no longer really needed.
   font-feature-settings: "liga", "tnum", "case", "calt", "zero", "ss01", "locl";
   font-variant-ligatures: contextual;
   -webkit-overflow-scrolling: touch;
