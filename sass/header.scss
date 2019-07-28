@@ -1,4 +1,4 @@
-@define-mixin menu {
+@mixin menu {
   position: absolute;
   background: var(--background);
   box-shadow: var(--shadow);
@@ -46,7 +46,7 @@
     margin: 20px 0;
 
     @media (--phone) {
-      @mixin menu;
+      @include menu;
       top: 50px;
       right: 0;
     }
@@ -103,7 +103,7 @@
       }
 
       &-more {
-        @mixin menu;
+        @include menu;
         top: 35px;
         left: 0;
 
