@@ -3,11 +3,11 @@
         <div class="header__logo">
             {% include "snippets/logo.html" -%}
         </div>
-        
         <div class="menu-trigger">menu</div>
     </div>
     {# Check if there are menu items to render, yes if > 0 #}
-    {% if config.extra.main_menu | length -%}
+    {%- set num = config.extra.main_menu | length -%}
+    {% if num > 0 -%}
       {% include "snippets/menu.html" -%}
     {% endif -%}
 </header>
