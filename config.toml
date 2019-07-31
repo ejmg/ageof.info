@@ -18,7 +18,14 @@ highlight_code = true
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = true
 
+taxonomies = [
+           {name = "tags"},
+           {name = "categories"}
+]
+
 [extra]
+
+author = "elias"
 # Put all your custom variables here
 
 # ---------------------------------------------------------
@@ -48,19 +55,23 @@ center = false
 #     title = "ageof.info"
 #     subtitle = "A simple, retro theme for Hugo"
 #     keywords = ""
-#     copyright = ""
+copyright = "copyright notice here"
 #     menuMore = "Show more"
 #     readMore = "Read more"
 #     readOtherPosts = "Read other posts"'
 
     # [languages.en.params.logo]
-logo_text = "ageof.info"
+logo_text = "$ ~/info.txt"
 logo_home_link = "/"
 
 main_menu = [
               {url="$BASE_URL/about", name="About"},
               {url="$BASE_URL/contact", name="Contact"},
+              {url="$BASE_URL/foo", name="foo"},
 ]
+menu_more = "Show more"
+read_more = "Read more"
+read_other_posts = "Read other posts"
     # [languages.en.menu]
     #   [[languages.en.menu.main]]
     #     identifier = "about"
