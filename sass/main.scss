@@ -14,7 +14,8 @@ body {
   font-family: 'Fira Code', Monaco, Consolas, Ubuntu Mono, monospace;
   font-size: 1rem;
   line-height: 1.54;
-  background-color: color-mod(var(--accent) blend(#1D1E28 98%));
+  background-color: #1D1E28;
+  // background-color: color-mod(var(--accent) blend(#1D1E28 98%));
   color: var(--color);
   text-rendering: optimizeLegibility;
   // -webkit-font-smoothing: antialiased; Seems that it is no longer really needed.
