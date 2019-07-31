@@ -12,10 +12,37 @@
               Original theme has sub-children checks on main-menu, not worrying about that here.
             #}
             <li>
-                <a href="{{ menu_item.url | replace(from="$BASE_URL", to=config.base_url) }}">
-                </a>
+                <a href="{{ menu_item.url | replace(from="$BASE_URL", to=config.base_url) }}">{{ menu_item.name }}</a>
             </li>
-          {% endfor -%}
-        {% endif -%}
+            {% endfor -%}
+            {%- set main_len = config.extra.main_menu | length -%}
+            {%- set show_len = config.extra.show_menu_items | length -%}
+            {%- if main_len > show_len -%}
+            <ul class="menu__sub-inner">
+                <li class="menu__sub-inner-more-trigger">{{ config.extra.menu_more }} ▾</li>
+                <ul class="menu__sub-inner-more hidden">
+                    {%- for hidden_item in config.extra.main_menu | slice(start=config.extra.show_menu_items) -%}
+                      {# Again, skipping sub-children check from original theme #}
+                    <li>
+                        <a href="{{ hidden_item.url | replace(from="$BASE_URL", to=config.base_url) }}">{{ hidden_item.name }}</a>
+                    </li>
+                    {%- endfor -%}
+                </ul>
+            </ul>
+        {%- endif -%}
+      {# Continues the original if-check at top of file for show_menu_items #}
+      {% else -%}
+        {%- for menu_item in config.extra.main_menu -%}
+            {# Skipping sub-child check from original theme again #}
+            <li><a href="{{ menu_item.url | replace(from="$BASE_URL", to=config.base_url) }}">{{ menu_item.name }}</a></li>
+        {%- endfor -%}
+      {%- endif -%}
+    </ul>
+
+    <ul class="menu__inner menu__inner--mobile">
+        {%- for menu_item in config.extra.main_menu -%}
+        {# skipping sub-child check #}
+        <li><a href="{{ menu_item.url | replace(from="$BASE_URL", to=config.base_url) }}">{{ menu_item.name }}</a></li>
+        {%- endfor-%}
     </ul>
 </nav>
