@@ -1,0 +1,16 @@
+<footer class="footer">
+    <div class="footer__inner">
+        {%- if config.extra.copyright -%}
+        <div class="copyright copyright--user">{{ config.extra.copyright | safe }}</div>
+        {%- else -%}
+        <div class="copyright">
+            <span>© {{ now() | date(format="%Y") }} Powered by <a href="https://www.getzola.org/">Zola</a></span>
+            <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+        </div>
+        {%- endif -%}
+    </div>
+</footer>
+
+<script type="text/javascript" src="{{ get_url(path="js/main.js" ) }}"></script>
+
+{%- include "snippets/extended_footer.html" -%}
