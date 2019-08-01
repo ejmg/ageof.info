@@ -1,4 +1,4 @@
-@mixin menu {
+@define-mixin menu {
   position: absolute;
   background: var(--background);
   box-shadow: var(--shadow);
@@ -45,9 +45,8 @@
     --shadow: 0 10px var(--shadow-color), -10px 10px var(--shadow-color), 10px 10px var(--shadow-color);
     margin: 20px 0;
 
-//    @media (--phone) {
-    @media (max-width: 684px) {
-      @include menu;
+    @media (--phone) {
+      @mixin menu;
       top: 50px;
       right: 0;
     }
@@ -60,8 +59,7 @@
       padding: 0;
 
       &--desktop {
-        // @media (--phone) {
-          @media (max-width: 684px) {
+        @media (--phone) {
           display: none;
         }
       }
@@ -69,8 +67,7 @@
       &--mobile {
         display: none;
 
-        // @media (--phone) {
-        @media (max-width: 684px) {
+        @media (--phone) {
           display: block;
         }
       }
@@ -83,8 +80,7 @@
         }
       }
 
-      // @media (--phone) {
-      @media (max-width: 684px) {
+      @media (--phone) {
         flex-direction: column;
         align-items: flex-start;
         padding: 0;
@@ -107,7 +103,7 @@
       }
 
       &-more {
-        @include menu;
+        @mixin menu;
         top: 35px;
         left: 0;
 
