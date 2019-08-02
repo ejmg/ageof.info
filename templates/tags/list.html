@@ -1,0 +1,12 @@
+<div class="posts">
+{{ __tera_context }}
+    {%- for term in terms -%}
+        <div class="post on-list">
+            <h1 class="post-title">
+                <a href="">{{ term.name }}</a></h1>
+
+        {# End of pagination for-loop #}
+    {%- endfor -%}
+    {#- I don't put pagination here like Terminal does. I don't like how
+    the buttons move with the size of post entries in the content div. -#}
+</div>

@@ -20,10 +20,10 @@ highlight_theme ="inspired-github" # "1337" # "ascetic-white" # "base16-ocean-li
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = true
 
-# taxonomies = [
-#            {name = "tags"},
-#            {name = "categories"}
-# ]
+taxonomies = [
+           {name = "tags"},
+           # {name = "categories"},
+]
 
 [extra]
 

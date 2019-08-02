@@ -7,7 +7,7 @@ author="elias"
 
 [taxonomies]
 tags = ["rust", "test"]
-categories = ["misc."]
+# categories = ["misc."]
 +++
 
 
