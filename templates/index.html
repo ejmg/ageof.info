@@ -27,9 +27,15 @@
 
             <div class="content">
                 {% block main -%}
-                {%- include "snippets/pagination.html" -%}
+                {%- include "snippets/list.html" -%}
                 {% endblock main -%}
             </div>
+            {#- 
+            I keep pagination out of list, unlike Terminal, because I don't
+            like how the pagination buttons move with the width of the content 
+            div.
+            -#}
+            {% include "snippets/pagination.html" -%}
 
             {% block footer -%}
             {% include "snippets/footer.html" -%}
