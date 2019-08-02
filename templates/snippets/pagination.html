@@ -1,27 +1,22 @@
-<div class="posts">
-    
-    {%- for page in paginator.pages -%}
-        <div class="post on-list">
-            <h1 class="post-title">
-                <a href="{{ page.permalink }}">{{ page.title }}</a></h1>
-            <div class="post-meta">
-                <span class="post-date">
-                    {{ page.date | date }}
-                </span>
-                <span class="post-author">:: {% if page.author %}{{ page.author }}{% else %}{{ config.extra.author }}{% endif %}</span>
-            </div>
-            {% if page.taxonomies.tags -%}
-                <span class="post-tags">
-                      {% for tag in page.taxonomies.tags -%}
-                          #<a href="foo">
-                          {{ tag }}
-                          </a>&nbsp;
-                      {# end of tags for-loop #}
-                      {% endfor -%}
-                      </span>
-                {# end if-check for tags #}
-            {% endif-%}
-        </div>
-    {# End of pagination for-loop #}
-    {%- endfor -%}
+<div class="pagination">
+    <div class="pagination__buttons">
+        {% if paginator.previous -%}
+            <span class="button previous">
+                <a href="{{ paginator.previous }}">
+                    <span class="button__icon">←</span>
+                    <span class="button__text">newer</span>
+                </a>
+            </span>
+            {# end of if-check for page.previous #}
+        {%  endif -%}
+        {% if paginator.next -%}
+            {# end of if-check for page.next #}
+            <span class="button next">
+                <a href="{{ paginator.next }}">
+                    <span class="button__text">older</span>
+                    <span class="button__icon">→</span>
+                </a>
+            </span>
+        {% endif-%}
+    </div>
 </div>
