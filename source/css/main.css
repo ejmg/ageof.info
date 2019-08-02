@@ -232,6 +232,7 @@ ol ol {
   max-width: 864px;
   min-height: 100vh;
   border-right: 1px solid rgba(255, 255, 255, 0.1);
+  margin: auto auto auto 3%;
 
   &.full,
   &.center {
@@ -245,6 +246,7 @@ ol ol {
 
   @media (--phone) {
     padding: 20px;
+    margin: unset;
   }
 }
 
