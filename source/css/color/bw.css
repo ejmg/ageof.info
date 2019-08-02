@@ -4,6 +4,7 @@
 @import '../pagination.css';
 @import '../post.css';
 @import '../variables.css';
+/* @import '../syntax.css'; */
 
 :root {
     --accent: #282828;
@@ -32,4 +33,10 @@ body {
 
 .container {
     border-right: 1px solid rgba(40, 40, 40, 0.1);
+}
+
+pre {
+    background-color: #F5F5F5 !important;
+    border-top: 1px solid rgba(40, 40, 40, .1);
+    border-bottom: 1px solid rgba(40, 40, 40, .1);
 }

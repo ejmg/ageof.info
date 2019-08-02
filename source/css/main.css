@@ -121,133 +121,135 @@ code {
 }
 
 pre {
-  background: transparent;
-  padding: 20px 10px;
-  margin: 40px 0;
-  font-size: .95rem;
-  overflow: auto;
-  border-top: 1px solid rgba(255, 255, 255, .1);
-	border-bottom: 1px solid rgba(255, 255, 255, .1);
+    background: transparent;
+    font-family: 'Fira Code', monospace;
+    font-feature-settings: "liga";
+    padding: 20px 10px;
+    margin: 40px 0;
+    font-size: .95rem;
+    overflow: auto;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
 
-  + pre {
-    border-top: 0;
-    margin-top: -40px;
-  }
+    + pre {
+        border-top: 0;
+        margin-top: -40px;
+    }
 
-  @media (--phone) {
-    white-space: pre-wrap;
-    word-wrap: break-word;
-  }
+    @media (--phone) {
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
 
-  code {
-    background: none !important;
-    margin: 0;
-    padding: 0;
-    font-size: inherit;
-    border: none;
-  }
+    code {
+        background: none !important;
+        margin: 0;
+        padding: 0;
+        font-size: inherit;
+        border: none;
+    }
 }
 
 blockquote {
-  border-top: 1px solid var(--accent);
-  border-bottom: 1px solid var(--accent);
-  margin: 40px 0;
-  padding: 25px;
+    border-top: 1px solid var(--accent);
+    border-bottom: 1px solid var(--accent);
+    margin: 40px 0;
+    padding: 25px;
 
-  @media (--phone) {
-    padding-right: 0;
-  }
+    @media (--phone) {
+        padding-right: 0;
+    }
 
-  &:before {
-    content: '”';
-    font-family: Georgia, serif;
-    font-size: 3.875rem;
-    position: absolute;
-    left: -40px;
-    top: -20px;
-  }
+    &:before {
+        content: '”';
+        font-family: Georgia, serif;
+        font-size: 3.875rem;
+        position: absolute;
+        left: -40px;
+        top: -20px;
+    }
 
-  p:first-of-type {
-    margin-top: 0;
-  }
+    p:first-of-type {
+        margin-top: 0;
+    }
 
-  p:last-of-type {
-    margin-bottom: 0;
-  }
+    p:last-of-type {
+        margin-bottom: 0;
+    }
 
-  p {
-    position: relative;
-  }
+    p {
+        position: relative;
+    }
 
-  p:before {
-    content: '>';
-    display: block;
-    position: absolute;
-    left: -25px;
-    color: var(--accent);
-  }
+    p:before {
+        content: '>';
+        display: block;
+        position: absolute;
+        left: -25px;
+        color: var(--accent);
+    }
 }
 
 table {
-  table-layout: fixed;
-  border-collapse: collapse;
-  width: 100%;
-  margin: 40px 0;
+    table-layout: fixed;
+    border-collapse: collapse;
+    width: 100%;
+    margin: 40px 0;
 }
 
 table, th, td {
-  border: 1px dashed var(--accent);
-  padding: 10px;
+    border: 1px dashed var(--accent);
+    padding: 10px;
 }
 
 th {
-  color: var(--accent);
+    color: var(--accent);
 }
 
 ul, ol {
-  margin-left: 30px;
-  padding: 0;
+    margin-left: 30px;
+    padding: 0;
 
-  li {
-    position: relative;
-  }
+    li {
+        position: relative;
+    }
 
-  @media (--phone) {
-    margin-left: 20px;
-  }
+    @media (--phone) {
+        margin-left: 20px;
+    }
 
-  ul, ol {
-    margin-top: 20px;
-  }
+    ul, ol {
+        margin-top: 20px;
+    }
 }
 
 ol ol {
-  list-style-type: lower-alpha;
+    list-style-type: lower-alpha;
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  padding: 40px;
-  max-width: 864px;
-  min-height: 100vh;
-  border-right: 1px solid rgba(255, 255, 255, 0.1);
-  margin: auto auto auto 3%;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    max-width: 864px;
+    min-height: 100vh;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    margin: auto auto auto 3%;
 
-  &.full,
-  &.center {
-    border: none;
-    margin: 0 auto;
-  }
+    &.full,
+    &.center {
+        border: none;
+        margin: 0 auto;
+    }
 
-  &.full {
-    max-width: 100%;
-  }
+    &.full {
+        max-width: 100%;
+    }
 
-  @media (--phone) {
-    padding: 20px;
-    margin: unset;
-  }
+    @media (--phone) {
+        padding: 20px;
+        margin: unset;
+    }
 }
 
 .content {
