@@ -13,8 +13,16 @@ categories = ["misc."]
 
 Foo Bar Buzz Fizz Qux Fum
 
-```rust
+```rs
 fn foo(arg: String) -> Result<u32, Io::Error> {
-    println!("wowie!");
+    println!("wowie!"); // Wu Tang! Wu Tang!!!!
+    if 1 != 0 {
+        println!("How many ligatures can I contrive??");
+        println!("Turns out a lot! ==> -/-> <!-- <$> >>=");
+    }
 }
 ```
+
+Here's a cool video:
+
+{{ youtube(id="TkN-MqWAlJc") }}
