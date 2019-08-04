@@ -11,16 +11,27 @@
                 <span class="post-author">:: {% if page.author %}{{ page.author }}{% else %}{{ config.extra.author }}{% endif %}</span>
             </div>
             {% if page.taxonomies.tags -%}
-                <span class="post-tags">
-                    {% for tag in page.taxonomies.tags -%}
-                        #<a href="">
-                        {{ tag }}
-                        </a>&nbsp;
-                        {# end of tags for-loop #}
-                    {% endfor -%}
-                </span>
-                {# end if-check for tags #}
+            <span class="post-tags">
+                {% for tag in page.taxonomies.tags -%}
+                #<a href="{{get_taxonomy_url(kind="tags", name=tag )}}">{{ tag }}
+                </a>&nbsp;
+                {# end of tags for-loop #}
+                {% endfor -%}
+            </span>
+            {# end if-check for tags #}
             {% endif-%}
+            
+            {% if page.taxonomies.categories -%}
+            <span class="post-tags">
+                {% for cat in page.taxonomies.categories -%}
+                <a href="{{get_taxonomy_url(kind="categories", name=cat )}}">{{ "{" }}{{cat }}{{"}"}}
+                </a>&nbsp;
+                {# end of cats for-loop #}
+                {% endfor -%}
+            </span>
+            {# end if-check for categories #}
+            {% endif-%}
+            
             {#                NOTE              -#}
             {# --------------------------------  #}
             {# Skipping the Cover page implementation. Not included/covered for now. #}

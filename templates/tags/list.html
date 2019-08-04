@@ -6,7 +6,7 @@
     <ul>
         {%- for term in terms -%}
             <li class="tag-list">
-                <a href="">#{{ term.name }}</a>
+                <a href="post.permalink">#{{ term.name }}</a>
                 ({{ term.pages | length }} post{{ term.pages | length | pluralize}})
             </li>
             {# End of pagination for-loop #}
