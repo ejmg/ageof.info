@@ -1,3 +1,6 @@
+{% import "macros/head.html" as head -%}
+{% import "macros/logo.html" as logo -%}
+{% import "macros/header.html" as header -%}
 <!DOCTYPE html>
 <html lang="{{ config.default_language }}">
     <head>
@@ -5,7 +8,7 @@
         <title>{{ config.title }}</title>
         {%- endblock header -%}
 
-        {% include "snippets/head.html" -%}
+        {{ head::head(config=config) }}
     </head>
     <body>
         {#
@@ -14,17 +17,15 @@
         "container" when both false.
         #}
         {% if config.extra.full_width -%}
-          {% set container = "container full" -%}
+        {% set container = "container full" -%}
         {% elif config.extra.center -%}
-          {% set container = "container center" -%}
+        {% set container = "container center" -%}
         {% else -%}
-          {% set container = "container" -%}
+        {% set container = "container" -%}
         {% endif -%}
 
         <div class="{{ container }}">
-            
-            {% include "snippets/header.html" -%}
-
+            {{ header::header(config=config) }}
             <div class="content">
                 {% block main -%}
                 {%- include "snippets/list.html" -%}
