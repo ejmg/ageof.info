@@ -24,7 +24,7 @@
             {% if page.taxonomies.categories -%}
             <span class="post-tags">
                 {% for cat in page.taxonomies.categories -%}
-                <a href="{{get_taxonomy_url(kind="categories", name=cat )}}">{{ "{" }}{{cat }}{{"}"}}
+                <a href="{{get_taxonomy_url(kind="categories", name=cat )}}">{{ "{" }}{{ cat }}{{"}"}}
                 </a>&nbsp;
                 {# end of cats for-loop #}
                 {% endfor -%}

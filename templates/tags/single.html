@@ -2,7 +2,7 @@
 {%- block main-%}
 <div class="post">
     <h1 class="post-title">
-        tag: #{{ term.name }}
+        tags ∋ #{{ term.name }}
         ({{ term.pages | length }} post{{ term.pages | length | pluralize}})
     </h1>
 
@@ -10,7 +10,7 @@
         {%- for post in term.pages -%}
         <li class="tag-list">
             {{ post.date | date(format="%Y.%m.%d") }}
-             :: <a href="{{ post.permalink }}">{{ post.title }}</a>
+            :: <a href="{{ post.permalink }}">{{ post.title }}</a>
             :: {% for tag in post.taxonomies["tags"] -%} <a href="{%- set _tag = get_taxonomy_url(kind="tags", name=tag) -%}{{ _tag }}">#{{ tag }}</a> {% endfor %}
         </li>
         {# End of pagination for-loop #}

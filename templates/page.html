@@ -24,7 +24,7 @@
     {%- if page.taxonomies.tags -%}
         <span class="post-tags">
             {% for tag in page.taxonomies.tags -%}
-                #<a href="">
+                #<a href="{{ get_taxonomy_url(kind="tags", name=tag ) }}">
                 {{ tag }}
                 </a>&nbsp;
                 {# end of tags for-loop #}
