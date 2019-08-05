@@ -12,5 +12,11 @@
 {% endif %}
 
 {# TODO: add rss, favicons, social media preview, and maybe google adsense #}
+{{ social::og_preview() }}
+
+<link rel="shortcut icon" href="{{ get_url(path="favicon-96x96.png") }}" type="image/x-icon" />
+{%- if config.generate_rss %}
+    <link rel="alternate" type="application/rss+xml" title="ageof.info :: rss" href="{{ get_url(path="rss.xml") }}">
+{% endif -%}
 
 {% endmacro head %}
