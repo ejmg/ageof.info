@@ -22,7 +22,7 @@ build_search_index = true
 
 taxonomies = [
            {name = "tags"},
-           # {name = "categories"},
+           {name = "categories"},
 ]
 
 [extra]

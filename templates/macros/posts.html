@@ -4,68 +4,69 @@
         {{ page.date | date(format="%Y.%m.%d") }}
     </span>
     {%- if author -%}
-    <span class="post-author">
-        {{ utils::pdate(page=page, config=config)}}
-    </span>
+        <span class="post-author">
+            {{ utils::pdate(page=page, config=config)}}
+        </span>
     {%- endif -%}
+    {# TODO: these bools should be set in config instead of hardcoded here #}
+    {{  posts::taxonomies(taxonomy=page.taxonomies,
+        disp_cat=true,
+        disp_tag=true) }}
 </div>
 {% endmacro meta %}
 
-{% macro taxonomy(taxonomy, disp_cat, disp_tag) %}
+{% macro taxonomies(taxonomy, disp_cat, disp_tag) %}
 
-{% if disp_cat and disp_tag -%}
-    <span class="post-tags">
-        {% if taxonomy.categories-%}
-            ::&nbsp;{{ "{" }}
-            {% for cat in taxonomy.categories -%}
-                <a href="{{ get_taxonomy_url(kind="categories", name=cat ) }}"> 
-                {{ cat }}
-                </a>&nbsp;
-                {# end of cats for-loop #}
-            {% endfor -%}
-            {{ "}" }} ::&nbsp;
+    {% if disp_cat and disp_tag -%}
+        {% if taxonomy.categories -%}
+            :: {
+            {%- for cat in taxonomy.categories -%}
+                {%- if loop.last -%}
+                    <a href="{{ get_taxonomy_url(kind="categories", name=cat ) }}">{{ cat }}</a>
+                {%- else -%}
+                    <a href="{{ get_taxonomy_url(kind="categories", name=cat ) }}">{{ cat }}</a>,
+                    {# end of if-check for whether last item or not #}
+                {%- endif -%}
+            {%- endfor -%}} {# <--- NOTE: OPEN CURLY BRACE #}
             {# end if-check for categories #}
-        {% endif -%}
+        {%- endif -%}
         
         {% if taxonomy.tags -%}
+            ::
             {% for tag in taxonomy.tags -%}
-                #<a href="{{get_taxonomy_url(kind="tags", name=tag )}}">
-                {{ tag }}
-                </a>&nbsp;
+                #<a href="{{get_taxonomy_url(kind="tags", name=tag )}}">{{ tag }}</a>
                 {# end of tags for-loop #}
             {% endfor -%}
             {# end if-check for tags #}
         {% endif -%}
-    </span>
-{% elif disp_cat -%}
-    <span class="post-tags">
+    {% elif disp_cat -%}
         {% if taxonomy.categories-%}
+            ::
             {{ "{" }}
             {% for cat in taxonomy.categories -%}
-                <a href="{{ get_taxonomy_url(kind="categories", name=cat ) }}">
-                    {{ cat }}
-                </a>&nbsp;
+                {%- if loop.last -%}
+                    <a href="{{ get_taxonomy_url(kind="categories", name=cat ) }}">{{ cat }}</a>
+                {%- else -%}
+                    <a href="{{ get_taxonomy_url(kind="categories", name=cat ) }}">{{ cat }},&nbsp;</a>
+                    {# end of if-check for whether last item or not #}
+                {%- endif -%}                    
                 {# end of cats for-loop #}
             {% endfor -%}
-            {{ "}" }} ::&nbsp;
+            {{ "}" }}
             {# end if-check for categories #}
         {% endif -%}
-    </span>
-{% elif disp_tag -%}
-    {% if taxonomy.tags -%}
-        <span class="post-tags">
+    {% elif disp_tag -%}
+        {% if taxonomy.tags -%}
+            ::
             {% for tag in taxonomy.tags -%}
-                #<a href="{{get_taxonomy_url(kind="tags", name=tag )}}">
-                {{ tag }}
-                </a>&nbsp;
-                {# end of tags for-loop #}
-            {% endfor -%}
-        </span>
-        {# end if-check for tags #}
+                #<a href="{{get_taxonomy_url(kind="tags", name=tag )}}">{{ tag }}</a>
+                    {# end of tags for-loop #}
+                {% endfor -%}
+            {# end if-check for tags #}
+            {% endif -%}
+            {# end if-check for BOTH disp bools #}
     {% endif -%}
-    {# end if-check for BOTH disp bools #}
-{% endif -%}
-{% endmacro post_taxonomy %}
+{% endmacro taxonomies %}
 
 {% macro tags(tags) %}
     {# TODO #}
