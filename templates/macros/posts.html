@@ -1,19 +1,41 @@
-{% macro meta(page, config, author) %}
-<div class="post-meta">
-    <span class="post-date">
-        {{ page.date | date(format="%Y.%m.%d") }}
-    </span>
-    {%- if author -%}
-        <span class="post-author">
-            {{ utils::pdate(page=page, config=config)}}
+{% macro section_meta(section, author) %}
+    <div class="post-meta">
+        <span class="post-date">
+            
+            {%- if section.extra["date"] -%}
+                {{ section.extra["date"]["$__toml_private_datetime"] | date(format="%Y.%m.%d") }}
+                {# end of section.date if-check #}
+            {%- endif -%}
         </span>
-    {%- endif -%}
-    {# TODO: these bools should be set in config instead of hardcoded here #}
-    {{  posts::taxonomies(taxonomy=page.taxonomies,
-        disp_cat=true,
-        disp_tag=true) }}
-</div>
-{% endmacro meta %}
+
+        <span class="post-author">
+            {%- if author -%}
+                {{ utils::author(section=section) }}
+            {%- endif -%}
+        </span>
+    </div>
+{% endmacro section_meta %}
+
+{% macro meta(page, author) %}
+    <div class="post-meta">
+        <span class="post-date">
+            {%- if page.date -%}
+                {{ page.date | date(format="%Y.%m.%d") }}
+                {# end of page.date if-check #}
+            {%- endif -%}
+        </span>
+
+        <span class="post-author">
+            {%- if author -%}
+                {{ utils::author(page=page) }}
+            {%- endif -%}
+        </span>
+        {# TODO: these bools should be set in config instead of hardcoded here #}
+        {{  posts::taxonomies(taxonomy=page.taxonomies,
+            disp_cat=true,
+            disp_tag=true) }}
+    </div>
+{% endmacro section_meta %}
 
 {% macro taxonomies(taxonomy, disp_cat, disp_tag) %}
 

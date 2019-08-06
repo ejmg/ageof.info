@@ -11,28 +11,8 @@
     <h1 class="post-title">
         <a href="{{ section.permalink  }}">{{ section.title }}</a>
     </h1>
-    <div class="post-meta">
-        {%- if section.date -%}
-            <span class="post-date">
-                {{ section.date | date(format="%Y.%m.%d") }}
-            </span>
-        {# end of section.date if-check #}
-        {%- endif -%}
-        <span class="post-author">
-            :: {% if section.author -%}{{ section.author }}{%  else -%}{{ config.extra.author }}{%- endif -%}
-        </span>
-    </div>
-    {%- if section.taxonomies.tags -%}
-        <span class="post-tags">
-            {% for tag in section.taxonomies.tags -%}
-                #<a href="{{ get_taxonomy_url(kind="tags", name=tag ) }}">
-                {{ tag }}
-                </a>&nbsp;
-                {# end of tags for-loop #}
-            {% endfor -%}
-        </span>
-    {# end of section.taxonomies.tags if-check #}
-    {%- endif -%}
+    
+    {{ posts::section_meta(section=section, author=config.extra.show_author) }}
 
     {#- Skipping logic for cover as was in original Terminal theme -#}
 
