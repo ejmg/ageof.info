@@ -1,9 +1,10 @@
 {% extends "index.html" -%}
 
-{%- block header %}
-    <title>{{ section.title }} - elias garcia</title>
-    {%- include "snippets/social.html" %}
-{%- endblock header -%}
+{%- block title %}
+    <title>{{ section.title }} :: elias garcia</title>
+    {# TODO: make some kind of social media linking, i guess? #}
+    {#%- include "snippets/social.html" %#}
+{%- endblock title -%}
 
 {%- block main -%}
 <div class="post">
@@ -38,6 +39,7 @@
     <div class="post-content">
         {{ section.content | safe }}
     </div>
-    {%- include "snippets/comments.html"  -%}
+    {# TODO: Decide if any sort of commenting functionality is desired? #}
+    {#%- include "snippets/comments.html"  -%#}
 </div>
 {%- endblock main -%}
