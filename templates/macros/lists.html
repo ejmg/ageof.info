@@ -8,7 +8,6 @@
             <a href="{{ page.permalink }}">{{ page.title }}</a>
         </h1>
         
-        {#- TODO: author bool should be set in config instead of hardcoded here -#}
         
         {{ posts::meta(page=page, author=config.extra.show_author) }}
         

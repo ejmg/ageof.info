@@ -30,10 +30,10 @@
                 {{ utils::author(page=page) }}
             {%- endif -%}
         </span>
-        {# TODO: these bools should be set in config instead of hardcoded here #}
+
         {{  posts::taxonomies(taxonomy=page.taxonomies,
-            disp_cat=true,
-            disp_tag=true) }}
+            disp_cat=config.extra.show_categories,
+            disp_tag=config.extra.show_tags) }}
     </div>
 {% endmacro section_meta %}
 

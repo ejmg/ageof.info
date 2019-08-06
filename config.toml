@@ -29,6 +29,8 @@ taxonomies = [
 
 author = "elias"
 show_author = false
+show_categories = true
+show_tags = true
 # Put all your custom variables here
 
 # ---------------------------------------------------------
