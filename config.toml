@@ -28,6 +28,7 @@ taxonomies = [
 [extra]
 
 author = "elias"
+show_author = false
 # Put all your custom variables here
 
 # ---------------------------------------------------------

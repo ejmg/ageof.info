@@ -1,9 +1,8 @@
-{% macro author(page, config) %}
-:: {% if page.extra.author -%}
-    {{ page.extra.author }}{%- else -%}    
-    {{ config.extra.author }}{%- endif -%}
+{% macro author(page) %}
+    ::
+    {% if page.extra.author -%}
+        {{ page.extra.author }}
+    {%- else -%}    
+        {{ config.extra.author }}
+    {%- endif -%}
 {%- endmacro author-%}
-
-{% macro pdate(date, format) %}
-{{ date | date(format=format) }}
-{% endmacro pdate %}
