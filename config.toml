@@ -2,7 +2,7 @@
 base_url = "https://ageof.info"
 
 # Used in RSS by default
-title = "ageof.info - the blog of elias julian marko garcia"
+title = "ageof.info :: the blog of elias julian marko garcia"
 description = "placeholder text for now"
 
 # The default language, used in RSS
