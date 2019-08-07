@@ -22,7 +22,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -webkit-overflow-scrolling: touch;
   -webkit-text-size-adjust: 100%;
-  font-feature-settings: "liga"
+  font-feature-settings: "liga";
 
   @media (max-width: $phone-max-width) {
     font-size: 1rem;
@@ -37,21 +37,21 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Actually keeping Pawroman's stylings here for font-size over h1-h6.
-/* I prefer differentiated header height.
+// Actually keeping Pawroman's stylings here for font-size over h1-h6.
+// I prefer differentiated header height.
 
-/* OLD
-/* ---------------------
-/* h1, h2, h3 {
-/*   font-size: 1.4rem;
-/* }
+// OLD
+// ---------------------
+// h1, h2, h3 {
+//   font-size: 1.4rem;
+// }
 
-/* h4, h5, h6 {
-/*   font-size: 1.2rem;
-/* }
+// h4, h5, h6 {
+//   font-size: 1.2rem;
+// }
 
-/* Pawroman's
-/* ---------------------
+// Pawroman's
+// ---------------------
 h1 {
   font-size: 1.4rem;
 }
@@ -101,22 +101,22 @@ figure {
   margin: 25px 0;
 
   &.left {
-    /* img {
+    // img {
       margin-right: auto;
-    /* }
+    // }
   }
 
   &.center {
-    /* img {
+    // img {
       margin-left: auto;
       margin-right: auto;
-    /* }
+    // }
   }
 
   &.right {
-    /* img {
+    // img {
       margin-left: auto;
-    /* }
+    // }
   }
 
   figcaption {
@@ -262,7 +262,6 @@ ol ol {
   max-width: 864px;
   min-height: 100vh;
   border-right: 1px solid rgba(255, 255, 255, 0.1);
-  margin: 0 auto;
 
   &.full,
   &.center {
