@@ -1,22 +1,29 @@
 {% macro head(config) %}
 
-<meta http-equiv="content-type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="description" content="{{ config.description }}"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="{{ config.description }}"/>
 
-{# -- Theme CSS -- #}
-<link rel="stylesheet" href="{{ get_url(path="assets/style.css") }}">
-{% if config.extra.theme_color != "orange" -%}
-{% set color = "assets/" ~ config.extra.theme_color ~ ".css" -%}
-<link rel="stylesheet" href="{{ get_url(path=color) }}">
-{% endif %}
+    {# -- Theme CSS -- #}
+    <link rel="stylesheet" href="{{ get_url(path="style.css") }}">
+    {% if config.extra.theme_color != "orange" -%}
+        {% set color = "color/" ~ config.extra.theme_color ~ ".css" -%}
+        <link rel="stylesheet" href="{{ get_url(path=color) }}">
+    {%- else -%}
+        <link rel="stylesheet" href="{{ get_url(path="color/orange.css") }}">
+    {% endif %}
 
-{# TODO: add rss, favicons, social media preview, and maybe google adsense #}
-{{ social::og_preview() }}
+    {#- TODO:
+    - [x] add rss
+    - [x] favicons
+    - [x] media preview
+    - [ ] maybe google adsense
+    -#}
+    {{ social::og_preview() }}
 
-<link rel="shortcut icon" href="{{ get_url(path="favicon-96x96.png") }}" type="image/x-icon" />
-{%- if config.generate_rss %}
-    <link rel="alternate" type="application/rss+xml" title="ageof.info :: rss" href="{{ get_url(path="rss.xml") }}">
-{% endif -%}
+    <link rel="shortcut icon" href="{{ get_url(path="favicon-96x96.png") }}" type="image/x-icon" />
+    {%- if config.generate_rss -%}
+        <link rel="alternate" type="application/rss+xml" title="ageof.info :: rss" href="{{ get_url(path="rss.xml") }}">
+    {%- endif -%}
 
 {% endmacro head %}
