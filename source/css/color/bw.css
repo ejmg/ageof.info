@@ -33,6 +33,29 @@ body {
 
 .container {
     border-right: 1px solid rgba(40, 40, 40, 0.1);
+    margin: auto auto auto 3%;
+    @media (--phone) {
+        margin: unset;
+    }    
+}
+
+.pagination {
+    &__buttons {
+        margin: -10%;
+    }
+}
+.post {
+    ul {
+        li:before {
+            content: '⊢';
+        }
+    }
+}
+
+.tag-list {
+    @media(--phone) {
+        margin-left: 5%;
+    }
 }
 
 pre {
