@@ -13,7 +13,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Fira Code', Monaco, Consolas, Ubuntu Mono, monospace;
+  font-family: 'Fira Code', Menlo, DejaVu Sans Mono, Monaco, Consolas, Ubuntu Mono, monospace;
   font-size: 1rem;
   line-height: 1.54;
   background-color: var(--background);
@@ -141,7 +141,7 @@ figure {
 }
 
 code {
-  font-family: 'Fira Code', Monaco, Consolas, Ubuntu Mono, monospace;
+  font-family: 'Fira Code', Menlo, DejaVu Sans Mono, Monaco, Consolas, Ubuntu Mono, monospace;
   font-feature-settings: normal;
   background: var(--accent-alpha-20);
   color: var(--accent);
@@ -151,7 +151,7 @@ code {
 }
 
 pre {
-  font-family: 'Fira Code', Monaco, Consolas, Ubuntu Mono, monospace;
+  font-family: 'Fira Code', Menlo, DejaVu Sans Mono, Monaco, Consolas, Ubuntu Mono, monospace;
   font-feature-settings: "liga";  
   padding: 20px 10px;
   font-size: .95rem;

@@ -54,6 +54,7 @@
     }
 
     &__inner {
+      // @include menu;
       display: flex;
       flex-wrap: wrap;
       list-style: none;
