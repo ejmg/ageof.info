@@ -5,26 +5,39 @@ description="a basic demo of zola. Does it work? This old man, he played one. He
 date=2019-03-27
 
 [taxonomies]
-tags = ["rust", "test", "zola", "ferrisp", "dev", "wu tang", "shaolin", "ghostface", "raekwon", "killa", "curry", "denzel"]
-categories = ["programming", "misc."]
+tags = ["rust", "test", "zola"]
+categories = ["programming", "misc.", "programming languages"]
 
 [extra]
-author="elias"
 +++
 
+# Hello Hello
 
-Foo Bar Buzz Fizz Qux Fum
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  Donec hendrerit
+tempor tellus.  Donec pretium posuere tellus.  Proin quam nisl, tincidunt et,
+mattis eget, convallis nec, purus.  Cum sociis natoque penatibus et magnis dis
+parturient montes, nascetur ridiculus mus.  Nulla posuere.  Donec vitae dolor.
+Nullam tristique diam non turpis.  Cras placerat accumsan nulla.  Nullam
+rutrum.  Nam vestibulum accumsan nisl.
 
-```rs
-fn foo(arg: String) -> Result<u32, Io::Error> {
-    println!("wowie!"); // Wu Tang! Wu Tang!!!!
-    if 1 != 0 {
-        println!("How many ligatures can I contrive??");
-        println!("Turns out a lot! ==> -/-> <!-- <$> >>=");
-    }
-}
+
+```python
+def foo(bar, **kwargs):
+    print("yo, this is nice!")
 ```
 
-Here's a cool video:
+## a list
 
-{{ youtube(id="TkN-MqWAlJc") }}
+* Donec hendrerit tempor tellus.
+* Nam a sapien.
+* Phasellus at dui in ligula mollis ultricies.
+* Mauris mollis tincidunt felis.
+* Nullam rutrum.
+
+### Yet another list
+1. Nunc aliquet, augue nec adipiscing interdum, lacus tellus malesuada massa,
+   quis varius mi purus non odio.
+2. Donec hendrerit tempor tellus. 
+3. Nunc aliquet, augue nec adipiscing interdum, lacus tellus malesuada massa,
+   quis varius mi purus non odio.
+
