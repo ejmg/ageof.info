@@ -35,6 +35,26 @@ h1, h2, h3, h4, h5, h6 {
   &:not(first-child) {
     margin-top: 40px;
   }
+
+  .zola-anchor {
+    font-size: 1.5rem;
+    visibility: hidden;
+    margin-left: 0.5rem;
+    vertical-align: 1%;
+    text-decoration: none;
+    border-bottom-color: transparent;
+    cursor: pointer;
+
+    @media(max-width: $phone-max-width){
+        visibility: visible;
+    }
+  }
+
+  &:hover {
+    .zola-anchor {
+      visibility: visible;
+    }
+  }
 }
 
 // Actually keeping Pawroman's stylings here for font-size over h1-h6.
