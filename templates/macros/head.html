@@ -17,11 +17,14 @@
     - [x] add rss
     - [x] favicons
     - [x] media preview
+    - [ ] twitter
     - [ ] maybe google adsense
     -#}
     {{ social::og_preview() }}
 
-    <link rel="shortcut icon" href="{{ get_url(path="favicon-96x96.png") }}" type="image/x-icon" />
+    {%- if config.extra.favicon is defined -%}
+        <link rel="shortcut icon" href="{{ get_url(path=config.extra.favicon) }}" type="image/x-icon" />
+    {%- endif -%}
     {%- if config.generate_rss -%}
         <link rel="alternate" type="application/rss+xml" title="ageof.info :: rss" href="{{ get_url(path="rss.xml") }}">
     {%- endif -%}
