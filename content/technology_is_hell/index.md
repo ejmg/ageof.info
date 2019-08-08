@@ -1,6 +1,5 @@
 +++
 title="technology is hell!"
-# Don't make the description long, it'll make the theme ugly.
 description="Yet another blog post ranting about XYZ technology for ABC reasons"
 date=2019-03-26
 

@@ -1,7 +1,6 @@
 +++
 title="what is zerm?"
-# Don't make the description long, it'll make the theme ugly.
-description="a basic demo of zola."
+description="a summary of what zerm is and why it is different."
 date=2019-08-07
 
 [taxonomies]
@@ -11,21 +10,23 @@ categories = ["programming", "misc.",]
 [extra]
 +++
 
-This is zerm, a minimalist theme for Zola based off of
-[panr's](https://twitter.com/panr) theme for Hugo.
+# hello
 
-While it's largely faithful to the original, there are minor changes:
+This is zerm, a minimalist theme for Zola based[^1] off of [panr's](https://twitter.com/panr)
+theme for Hugo.
+
+While it's largely faithful to the original, there are some changes:
 - no prism.js integration, instead we use Zola's syntax highlighting to reduce overhead.
 - removal of PostCSS and leveraging Zola's use of Sass for simple styling.
   - much thanks to [Paweł
     Romanowski's](https://github.com/pawroman/zola-theme-terminimal/)
-    independent fork of Terminal. By the time I discovered it, all I had left
-    was converting PostCSS to Sass and he saved me the small overhead involved.
+    independent fork of Terminal. Their Sass stylings saved me the overhead of
+    figuring it out myself.
 - no preview images. I want a theme that is focused on content.
 - tags are included as post-meta data to focus on content.
-- categories are included, though functionally are no different from tags.
 - Other small, opinionated changes that I think lend to increasing the
   minimalism of Zerm as well as its overall aesthetic.
+  
   
 Things this theme does not have but either Terminal or Terminimal might:
 - better short-codes for things like embedding videos or images, though I will
@@ -34,9 +35,7 @@ Things this theme does not have but either Terminal or Terminimal might:
   no plans to add this but [PR's are always
   **welcomed**](https://github.com/ejmg/zerm/pulls).
   
-A quick demo:
-
-# Header I
+## A quick demo
 
 `inline code`
 
@@ -46,21 +45,21 @@ fn main(n: String) {
 }
 ```
 
-# Header II
+### Header III
 
 > a somewhat kinda maybe large quote that maybe spans
 > more than one line but I mean really who even cares
 > okay maybe I do but point being is yes nice.
 
-# Header III
+#### Header IV
 
 | hello | tables    | nice |
 |:-----:|:---------:|------|
 | wow   | much love | yes  |
-
 
   
 Like zerm? Then [install
 Zola](https://www.getzola.org/documentation/getting-started/installation/) and
 [get started](https://www.getzola.org/documentation/themes/installing-and-using-themes/#installing-a-theme)!
 
+[^1]: fork? port? a little bit of the former, more of the latter?

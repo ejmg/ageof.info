@@ -26,11 +26,13 @@ highlight_theme = "axar" # Other dark themes that work: "1337", "agola-dark",
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = false
 
-# Built in taxonomies of Zerm. 
+# Built in taxonomies of zerm. 
 taxonomies = [
            {name = "tags"},
            {name = "categories"},
 ]
+
+insert_anchor_links = true
 
 [extra]
 # Put all your custom variables here
@@ -52,7 +54,7 @@ show_tags = true
 
 # Theme color. You can have any color you want, so long as it's...
 # ["orange", "blue", "red", "green", "pink"]
-theme_color = "blue"
+theme_color = "green"
 
 # How many menu items to show on desktop. if you set this to 0, only submenu
 # button will be visible.
@@ -70,8 +72,8 @@ center = false
 # Copyright notice if desired. Defaults to 
 # copyright = "copyright notice here"
 
-# What is displayed in the top left corner of the website. Default is Zerm.
-logo_text = "Zerm"
+# What is displayed in the top left corner of the website. Default is zerm.
+logo_text = "zerm"
 
 # Link in logo. Default returns you to $BASE_URL.
 logo_home_link = "/"

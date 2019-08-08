@@ -1,6 +1,5 @@
 +++
 title="demo"
-# Don't make the description long, it'll make the theme ugly.
 description="a basic demo of zola."
 date=2019-08-06
 
