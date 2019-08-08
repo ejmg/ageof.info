@@ -239,7 +239,9 @@ ul, ol {
   padding: 0;
 
   li {
-    position: relative;
+      position: relative;
+      margin-top: 5px;
+      margin-bottom: 5px;
   }
 
   @media (max-width: $phone-max-width) {
@@ -247,7 +249,8 @@ ul, ol {
   }
 
   ul, ol {
-    margin-top: 20px;
+      margin-top: 10px;
+      margin-bottom: 10px;
   }
 }
 

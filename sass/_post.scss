@@ -40,13 +40,22 @@
   }
 
   &-title {
-    --border: 3px dashed var(--accent);
+    --border: 3px dotted var(--accent);
     position: relative;
     color: var(--accent);
     margin: 0 0 15px;
     padding-bottom: 15px;
     border-bottom: var(--border);
 
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 2px;
+      display: block;
+      width: 100%;
+      border-bottom: var(--border);
+    }
+    
     a {
       text-decoration: none;
     }
