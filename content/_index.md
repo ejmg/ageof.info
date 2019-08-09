@@ -1,6 +1,6 @@
 +++
 sort_by = "date"
-transparent = true
+transparent = false
 paginate_by = 3
 insert_anchor_links = "right"
 +++
