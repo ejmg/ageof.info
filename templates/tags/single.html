@@ -1,23 +1,17 @@
-{%- extends "index.html"-%}
-{%- block main-%}
-    <div class="post">
-        <h1 class="post-title">
-            tags ∋ #{{ term.name }}
-            ({{ term.pages | length }} post{{ term.pages | length | pluralize}})
-        </h1>
+{% extends "zerm/templates/tags/single.html" %}
 
-        <ul>
-            {%- for post in term.pages -%}
-                <li class="tag-list">
-                    {{ post.date | date(format="%Y.%m.%d") }}
-                    :: <a href="{{ post.permalink }}">{{ post.title }}</a>
-                    :: {% for tag in post.taxonomies["tags"] -%} <a href="{%- set _tag = get_taxonomy_url(kind="tags", name=tag) -%}{{ _tag }}">#{{ tag }}</a> {% endfor %}
-                </li>
-                {# End of pagination for-loop #}
-            {%- endfor -%}
-            {#- I don't put pagination here like Terminal does. I don't like how
-            the buttons move with the size of post entries in the content div. -#}
-        </ul>
+{% import "_macros.html" as macros %}
 
-</div>
-{%- endblock main-%}
+{%- block title %}
+    <title>{{ config.title }} :: #{{ term.name }}</title>
+    {# TODO: make some kind of social media linking, i guess? #}
+    {#%- include "snippets/social.html" %#}
+{%- endblock title -%}
+
+{%- block og_preview -%}
+    {{ macros::og_preview() }}
+{%- endblock og_preview -%}
+
+{%- block copyright -%}
+    {{ macros::copyright() }}
+{%- endblock copyright -%}
