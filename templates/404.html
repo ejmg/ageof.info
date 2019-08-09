@@ -1,0 +1,36 @@
+{% extends "zerm/templates/index.html" -%}
+{% import "_macros.html" as macros %}
+
+{%- block title %}
+    <title> 404 :: {{  config.extra.author }}</title>
+    {# TODO: make some kind of social media linking, i guess? #}
+    {#%- include "snippets/social.html" %#}
+{%- endblock title -%}
+
+{%- block og_preview -%}
+    <meta property="og:title" content="{{ social::og_title() }}" />
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="{{ get_url(path="404.html") }}"/>
+    <meta property="og:description" content="{{ social::og_description() }}"/>
+    {%- if config.extra.og_preview_img -%}
+        <meta property="og:image" content="{{ config.extra.og_preview_img }}"/>
+    {%- endif -%}
+{%- endblock og_preview -%}
+
+{%- block main -%}
+    <div class="post">
+        <h1 class="post-title">
+            <a href="{{ config.base_url }}"><$>404<$></a>
+        </h1>
+
+        <div class="post-content">
+            <p>
+                the content you were looking for can't be found. if that's a mistake, please feel free email me or make a PR
+            </p>
+        </div>
+    </div>
+{%- endblock main -%}
+
+{%- block copyright -%}
+    {{ macros::copyright() }}
+{%- endblock copyright -%}
