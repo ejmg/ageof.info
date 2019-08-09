@@ -1,0 +1,73 @@
+@import "../themes/zerm/sass/variables";
+
+.header .menu {
+    color: var(--color);
+    --shadow-color: var(--accent-alpha-70);    
+}
+
+.header .menu__sub-inner-more {
+    color: var(--color);
+}
+
+.container {
+    border-right: 1px solid rgba(40, 40, 40, 0.1);
+    margin: auto auto auto 10%;
+    @media (max-width: $phone-max-width) {
+        margin: unset;
+    }
+}
+
+.pagination {
+    &__buttons {
+        margin: -10%;
+    }
+}
+
+.posts {
+    min-width: 60%;
+}
+
+.post {
+    margin-top: -3%;
+    margin-bottom: -3%;
+
+    &-title{
+        @media (max-width: $phone-max-width) {
+            margin-top: 5%;
+        }
+    }
+}
+
+.cc {
+    height: 1em;
+    display: inline-flex;
+    vertical-align: middle;
+}
+//     ul {
+//         li:before {
+//             content: '⊢';
+//         }
+//     }
+// }
+
+.tag-list {
+    @media(max-width: $phone-max-width) {
+        margin-left: 5%;
+    }
+}
+
+code {
+    background-color: rgba(40, 40, 40, .1);
+}
+
+pre {
+    background-color: #e8e8e8 !important;// #F5F5F5 !important;// #d4d8d9 !important;// 
+    border-top: 1px solid rgba(20, 20, 20, .5);
+    border-bottom: 1px solid rgba(20, 20, 20, .5);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    &:not(first-child) {
+        margin-top: 20px;
+    }
+}

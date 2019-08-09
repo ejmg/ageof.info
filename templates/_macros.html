@@ -4,7 +4,7 @@
     <meta property="og:url" content="{{ current_url }}"/>
     <meta property="og:description" content="{{ social::og_description() }}"/>
     {%- if config.extra.og_preview_img -%}
-        <meta property="og:image" content="{{ get_url(path=config.extra.og_preview_img) }}"/>
+        <meta property="og:image" content="{{ config.extra.og_preview_img }}"/>
     {%- endif -%}
 {% endmacro og_preview %}
 
@@ -56,3 +56,64 @@
         </span>
     </div>
 {% endmacro copyright %}
+
+{% macro paginate() %}
+    <div class="pagination">
+        <div class="pagination__buttons">
+            {% if paginator.previous -%}
+                <span class="button previous">
+                    <a href="{{ paginator.previous }}">
+                        <span class="button__icon"><--</span>
+                        <span class="button__text">newer</span>
+                    </a>
+                </span>
+                {# end of if-check for page.previous #}
+            {%  endif -%}
+            {% if paginator.next -%}
+                {# end of if-check for page.next #}
+                <span class="button next">
+                    <a href="{{ paginator.next }}">
+                        <span class="button__text">older</span>
+                        <span class="button__icon">--></span>
+                    </a>
+                </span>
+            {% endif-%}
+        </div>
+    </div>
+{% endmacro paginate %}
+
+{% macro list_pages() %}
+    <div class="posts">
+        
+        {%- for page in paginator.pages -%}
+            
+            <div class="post on-list">
+                <h1 class="post-title">
+                    <a href="{{ page.permalink }}">{{ page.title }}</a>
+                </h1>
+                
+                
+                {{ posts::meta(page=page, author=config.extra.show_author) }}
+                
+                {#-                NOTE              -#}
+                {#- --------------------------------  -#}
+                {#- Skipping the Cover page implementation. Not included/covered for now. -#}
+
+                <div class="post-content">
+                    {%  if page.description -%}
+                        {{ page.description }}
+                        {#- end if-check for description -#}
+                    {%  endif -%}
+                </div>
+                {% if page.description -%}
+                    <div>
+                        <a class="read-more button" href="{{ page.permalink }}">{{ config.extra.read_more }} ==></a>
+                    </div>
+                {% endif -%}
+            </div>
+            {# End of pagination for-loop #}
+        {%- endfor -%}
+        {#- I don't put pagination here like Terminal does. I don't like how
+        the buttons move with the size of post entries in the content div. -#}
+    </div>
+{% endmacro list_pages %}

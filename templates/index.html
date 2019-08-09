@@ -5,6 +5,14 @@
     {{ macros::og_preview() }}
 {%- endblock og_preview -%}
 
+{%- block main -%}
+    {{ macros::list_pages() }}
+{%- endblock main -%}
+
+{%- block pagination -%}
+    {{ macros::paginate() }}
+{%- endblock pagination -%}
+
 {%- block copyright -%}
    {{ macros::copyright() }}
 {%- endblock copyright -%}

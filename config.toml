@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "/"
+base_url = "https://ageof.info"
 
 # Used in RSS by default
 title = "ageof.info"
@@ -30,6 +30,13 @@ highlight_theme = "inspired-github" # Other dark themes that work: "1337", "agol
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = false
 
+# A list of glob patterns specifying asset files to ignore when
+# processing the content directory.
+# Defaults to none, which means all asset files are copied over to the public folder.
+# Example:
+#     ignored_content = ["*.{graphml,xlsx}", "temp.*"]
+ignored_content = []
+
 # Built in taxonomies of zerm. 
 taxonomies = [
            {name = "tags"},
@@ -57,6 +64,12 @@ show_tags = true
 # Theme color. You can have any color you want, so long as it's...
 # ["orange", "blue", "red", "green", "pink"]
 theme_color = "light"
+
+# Custom css to style over the defaults. This is useful when you only have a
+# few small tweaks to make rather than a major rehaul to the theme.
+# It would be best to make this a proper .sass or .scss file in sass/ rather
+# than placing in static/
+custom_css = "custom.css"
 
 # How many menu items to show on desktop. if you set this to 0, only submenu
 # button will be visible.
@@ -88,8 +101,8 @@ logo_home_link = "/"
 # Menu items to display. You define a url and the name of the menu item.
 # NOTE: `$BASE_URL/` must be included in the url name.
 main_menu = [
-              {url="$BASE_URL/about/", name="$about"},
-              {url="$BASE_URL/contact/", name="$contact"},
+              {url="/about/", name="$about"},
+              {url="/contact/", name="$contact"},
 ]
 
 # Displayed as title of drop-down menu when size of main_menu > show_menu_items.
