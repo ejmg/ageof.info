@@ -40,7 +40,7 @@ Endler](https://matthias-endler.de/) and [Santiago
 Pastorino](https://santiagopastorino.com/) that revolved around building a [toy
 shell](http://conf2018.rust-belt-rust.com/sessions/#shell) in rust. this
 workshop was a great experience for me (afaik, everyone) because of the
-applicability and the and engaging with the material. now, by definition,
+applicability of the material and its engagement. now, by definition,
 technical workshops are supposed to be engaging and applied, but this workshop
 was doubly so for someone inexperienced and looking for a fun, ready, and
 "realistic" application of rust.
