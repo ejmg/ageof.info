@@ -1,5 +1,7 @@
 # The URL the site will be built for
-base_url = "https://ageof.info"
+# base_url = "https://ageof.info"
+base_url = "/"
+
 
 # Used in RSS by default
 title = "ageof.info"
@@ -87,7 +89,7 @@ favicon = "favicon-96x96.png"
 
 # Set a custom preview image for your website when posted as a link.
 # Must be placed in root of static/ directory...
-og_preview_img = "oni.jpg"
+og_preview_img = "it_me.jpg"
 
 # Copyright notice if desired. Defaults to 
 # copyright = ""
@@ -103,6 +105,9 @@ logo_home_link = "/"
 main_menu = [
               {url="/about/", name="$about"},
               {url="/contact/", name="$contact"},
+              {url="/assets/pdfs/cv.pdf", name="$cv"},
+              {url="/logs/", name="$logs"},
+              {url="/readings/", name="$readings"},
 ]
 
 # Displayed as title of drop-down menu when size of main_menu > show_menu_items.

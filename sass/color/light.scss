@@ -1,3 +1,5 @@
+@import "../../themes/zerm/sass/variables";
+
 :root {
   --accent: rgb(40, 40, 40);
   --accent-alpha-20: rgba(40, 40, 40, .2);
@@ -13,4 +15,18 @@ body {
 
 .logo {
     color: #F5F5F5;
+}
+
+.container {
+    border-right: 1px solid rgba(40, 40, 40, 0.1);
+}
+
+code {
+    background-color: rgba(40, 40, 40, .1);
+}
+
+pre {
+    background-color: #e8e8e8 !important;// #F5F5F5 !important;// #d4d8d9 !important;// 
+    border-top: 1px solid rgba(20, 20, 20, .5);
+    border-bottom: 1px solid rgba(20, 20, 20, .5);
 }
