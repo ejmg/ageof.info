@@ -13,20 +13,27 @@
     <meta property="og:url" content="{{ get_url(path="404.html") }}"/>
     <meta property="og:description" content="{{ social::og_description() }}"/>
     {%- if config.extra.og_preview_img -%}
-        <meta property="og:image" content="{{ config.extra.og_preview_img }}"/>
+        <meta property="og:image" content="{{ get_url(path="config.extra.og_preview_img") }}"/>
     {%- endif -%}
 {%- endblock og_preview -%}
 
 {%- block main -%}
     <div class="post">
         <h1 class="post-title">
-            <a href="{{ config.base_url }}"><$>404<$></a>
+            error 404
         </h1>
-
         <div class="post-content">
+            <h1>page not found</h1>
             <p>
-                the content you were looking for can't be found. if that's a mistake, please feel free email me or make a PR
+                the content you were looking for can't be found. if that's a
+                mistake, please feel free to
+                <a href="{{ get_url(path="/contact/") }}">contact me</a> or
+                <a href="https://github.com/ejmg/ageof.info/issues">open an issue</a>.
             </p>
+            <div style="max-width: 80%; margin: 0 10% 0 10%;">
+                <img src="{{  get_url(path="oni.jpg") }}" alt="laughing oni" style="border-radius: 25%">
+            </div>
+            <p><a href="{{ config.base_url }}">return to index</a>.</p>
         </div>
     </div>
 {%- endblock main -%}
