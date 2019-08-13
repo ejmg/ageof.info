@@ -1,26 +1,33 @@
-# Terminal for Zola
+# my blog
 
-This theme is adopted from [@panr's](https://twitter.com/panr)
-[Terminal](https://github.com/panr/hugo-theme-terminal/) theme for Hugo.
+this is my blog. specifically, this is like the third incarnation of it. 
 
-# Customizing
+this time round i decided to use [zola](https://getzola.org), and its theme is
+based of off [zerm](https://github.com/ejmg/zerm), which is a hugo port i
+made. there are quite a few customizations i've made to it, and i'm not
+convinced they're all that good, so use at your own risk.
 
-The theme was built using [PostCSS](https://postcss.org/). I don't really care
-for the extra overhead myself, but I preserved the styling in my port to stay
-true to the original for other end users and to preserve the nicely organized
-CSS stylings. This means you will want to use PostCSS for any major changes to
-styling without having to refactor a good amount of CSS. The good news is that
-PostCSS is only used as a pre-processor here, so you won't be running any
-unnecessary JS on the browser; we only use it to transpile PostCSS compliant
-CSS into web-browser compliant CSS.
+## building
 
-After modifying your desired stylings, run the following from the root of the
-theme directory.
+install zola and clone this theme, then:
 
 ```
-npm install
-npm i yarn
-yarn build
+cd ageof.info/
+mkdir themes
+cd themes/
+git clone git@github.com:ejmg/zerm.git
+cd ..
+zola serve # or build if deploying somewhere
 ```
 
-This ought to generate the minified contents of `style.css`, etc., into `static/assets/`.
+## misc
+
+1. i don't particularly recommend anyone to use my webdev code as an example, it's not pretty
+
+2. this was the repo i originally fleshed out zerm, so there's some gunk in
+here that isn't relevant anymore but that i've yet to clean out. please don't
+mind my bytes 👻.
+
+# license
+
+Code is MIT, content is Creative Commons SA 4.0.
