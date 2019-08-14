@@ -15,17 +15,10 @@ module.exports = {
   },
   entry: {
     "main.js": [join("source", "js", "main.js"), join("source", "js", "menu.js")],
-    "prism.js": join("source", "js", "prism.js"),
-    "style.css": join("source", "css", "style.css"),
-    "red.css": join("source", "css", "color", "red.css"),
-    "blue.css": join("source", "css", "color", "blue.css"),
-    "green.css": join("source", "css", "color", "green.css"),
-    "pink.css": join("source", "css", "color", "pink.css"),
-    "bw.css": join("source", "css", "color", "bw.css"),
   },
   output: {
     filename: "[name]",
-    path: join("static/assets"),
+    path: join("static/assets/js"),
     publicPath: "",
   },
   performance: {
@@ -66,14 +59,6 @@ module.exports = {
                 modules: true,
                 importLoaders: 1,
                 localIdentName: "[local]",
-              },
-            },
-            {
-              loader: "postcss-loader",
-              options: {
-                config: {
-                  path: "postcss.config.js",
-                },
               },
             },
           ],

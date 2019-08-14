@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://ageof.info"
+base_url = "/"
 
 
 # Used in RSS by default
