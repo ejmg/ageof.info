@@ -39,7 +39,7 @@ remove-staging:
 serve:
 	$(MAKE) -C $(SITE_DIR) serve
 
-DOCKER_REPO=registry.gitlab.com/ejmg/ageof-info
+DOCKER_REPO=registry.gitlab.com/ejmg/ageof.info
 
 build-zola-docker:
 	docker login registry.gitlab.com
