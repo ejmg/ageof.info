@@ -109,7 +109,7 @@ table, th, td {
   padding: 5px;
 }
 
-ul, ol {
+.logs {
     @media(max-width: $phone-max-width) {
         white-space: nowrap;
     }
