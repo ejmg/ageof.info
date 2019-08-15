@@ -2,7 +2,7 @@ stages:
     - build
     - deploy
 
-image: registry.gitlab.com/ejmg/ageof.info:latest
+image: registry.gitlab.com/ejmg/ageof-info:latest
 
 staging-deploy:
     stage: deploy
@@ -13,9 +13,9 @@ staging-deploy:
     script:
         - make deploy-staging
     only:
-        - branches@ejmg/ageof.info
+        - branches@ejmg/ageof-info
     except:
-        - master@ejmg/ageof.info
+        - master@ejmg/ageof-info
 
 stop_staging:
     stage: deploy
@@ -34,5 +34,5 @@ site-deploy:
     script:
         - make deploy
     only:
-        - master@ejmg/ageof.info
+        - master@ejmg/ageof-info
 
