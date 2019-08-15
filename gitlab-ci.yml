@@ -1,0 +1,38 @@
+stages:
+    - build
+    - deploy
+
+image: registry.gitlab.com/ejmg/ageof.info:latest
+
+staging-deploy:
+    stage: deploy
+    environment:
+        name: staging/$CI_COMMIT_REF_NAME
+        url: https://null.ageof.info/$CI_COMMIT_REF_NAME/
+        on_stop: stop_staging
+    script:
+        - make deploy-staging
+    only:
+        - branches@ejmg/ageof.info
+    except:
+        - master@ejmg/ageof.info
+
+stop_staging:
+    stage: deploy
+    environment:
+        name: staging/$CI_COMMIT_REF_NAME
+        action: stop
+    script:
+        - make remove-staging
+    when: manual
+
+site-deploy:
+    stage: deploy
+    environment:
+        name: site
+        url: https://ageof.info/
+    script:
+        - make deploy
+    only:
+        - master@ejmg/ageof.info
+
