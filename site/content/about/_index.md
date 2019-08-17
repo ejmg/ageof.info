@@ -22,12 +22,12 @@ are varied. you will probably find me reading about or working on projects invol
 - programming languages and PLT
 - systems programming
 - software design and safety
-- novel interdisciplinary applications of computer science, particularly theory
+- computation social science
 
 in a previous life, i studied financial, monetary, and institutional
 economics. a lot has changed since then and so have i, but my passion for these
-topics have grown more intense. maybe one day i'll give them the focus they
-deserve.
+topics have only grown more intense. maybe one day i'll give them the focus
+they deserve.
 
 if you've read this far, you may be interested in my [cv (of sorts)](assets/pdfs/cv.pdf).
 
