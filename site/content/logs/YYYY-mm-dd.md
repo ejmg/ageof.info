@@ -1,6 +1,6 @@
 +++
-title = "YYYY-mm-dd"
-date = YYYY-mm-dd
+# title = "YYYY-mm-dd"
+# date = YYYY-mm-dd
 +++
 
 # work
