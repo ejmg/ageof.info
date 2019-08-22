@@ -5,7 +5,7 @@ title = "about"
 date = 2019-08-10
 +++
 
-<div class="profile-pic">{{resize_image(path="about/it_me.jpg", width=340, height=400, op="fit_width")}}</div>
+<div class="profile-pic">{{resize_image(path="about/it_me.jpg", width=340, height=400, op="fit_width", quality=90)}}</div>
 
 ## hola
 
@@ -18,11 +18,12 @@ computer science.
 
 ## my interests
 
-are varied. you will probably find me reading about or working on projects involving:
+...are varied. you will probably find me reading about or working on projects
+involving:
 - programming languages and PLT
 - systems programming
 - software design and safety
-- computation social science
+- computational social science
 
 in a previous life, i studied financial, monetary, and institutional
 economics. a lot has changed since then and so have i, but my passion for these
