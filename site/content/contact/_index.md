@@ -21,7 +21,7 @@ you can typically find me as `ejmg` or `eliasjmgarcia`. some that may be of imme
 - [github](https://github.com/ejmg)
 - [keybase](https://keybase.io/ejmg)
 - [twitter](https://twitter.com/eliasjmgarcia)
-- [linkedin](https://linked.in/eliasjmgarcia)
+- [linkedin](https://www.linkedin.com/in/ejmg)
 
 despite the numerous friends and connections i made on twitter, i gave up my
 active twitter presence around a year ago or so.
