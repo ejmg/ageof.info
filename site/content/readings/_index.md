@@ -1,16 +1,17 @@
 +++
 title = "readings"
 [extra]
-date = 2019-08-12
+date = 2019-08-28
 +++
 
 on my old blog, i wrote a lot about what i read, whether articles or books. i
 feel inclined to do something similar again here.[^1].
 
-| title                                                                                                                                         | author          | status  |
-|:----------------------------------------------------------------------------------------------------------------------------------------------|:----------------|:-------:|
-| [Hands-On Data Structures & Algorithms with Rust](https://www.packtpub.com/application-development/hands-data-structures-and-algorithms-rust) | Claus Matzinger | Reading |
-| [Feeling Good](https://www.goodreads.com/book/show/46674.Feeling_Good)                                                                        | David Burns     | Reading |
+| title                                                                                                                                         | author           | status  |
+|:----------------------------------------------------------------------------------------------------------------------------------------------|:----------------:|:-------:|
+| [Hands-On Data Structures & Algorithms with Rust](https://www.packtpub.com/application-development/hands-data-structures-and-algorithms-rust) | Claus Matzinger  | reading |
+| [Feeling Good](https://www.goodreads.com/book/show/46674.Feeling_Good)                                                                        | David Burns      | reading |
+| [Utopia Deferred: Writings from Utopie (1967–1978)](https://mitpress.mit.edu/books/utopia-deferred)                                           | Jean Baudrillard | reading |
 
 ---
 [^1]: i'm not sure what this will look like in its entirety, so for now i'm
