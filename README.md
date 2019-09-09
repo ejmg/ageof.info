@@ -3,15 +3,15 @@
 this is my blog. specifically, this is like the third incarnation of it.
 
 this time round i decided to use [zola](https://getzola.org), and its theme is
-based of off [zerm](https://github.com/ejmg/zerm), which is a hugo port i
-made. there are quite a few customizations i've made to it, and i'm not
-convinced they're all that good, so use at your own risk.
+based of off [zerm](https://github.com/ejmg/zerm), which is a hugo port i also
+made. there are quite a few customizations i've made to the theme for my own
+blog, and i'm not convinced they're all that good, so use at your own risk.
 
 ## setup
 
 this website has GitLab's CI/CD deploying it upon each commit. It's hosted over
 on AWS S3, and Cloudflare handles DNS/caching. I use a Makefile to drive most
-of my stuff, too. I based most of this off of an [aidan's
+of my stuff, too. I based most of this off of [aidan's
 setup](https://raptros.com/blog/late-2018-relaunch/).
 
 ## building
