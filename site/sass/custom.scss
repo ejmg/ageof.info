@@ -10,7 +10,8 @@
 }
 
 .container {
-     margin: auto auto auto 10%;
+    margin: auto auto auto 10%;
+    // max-width: 980px;
     @media (max-width: $phone-max-width) {
         margin: unset;
     }
@@ -18,6 +19,9 @@
     @media (max-width: $tablet-max-width) {
         margin: unset;
     }
+    // .content {
+    //     display: block;
+    // }
 }
 
 .pagination {
@@ -84,10 +88,13 @@ hr {
     }
 
     img {
-        max-width: 340px;
+        max-width: 420px;
         border-radius: 25%;
 
         @media(max-width: $phone-max-width) {
+            max-width: 100%;
+        }
+        @media(max-width: $tablet-max-width) {
             max-width: 100%;
         }
     }
@@ -113,4 +120,34 @@ table, th, td {
     @media(max-width: $phone-max-width) {
         white-space: nowrap;
     }
+    /* TODO: fix ul listing for $logs page     */
+    /* ul { */
+    /*     list-style: none; */
+
+    /*     li:before { */
+    /*         content: '⦿'; */
+    /*         position: absolute; */
+    /*         left: -20px; */
+    /*         color: var(--accent); */
+    /*     } */
+    /*     ul { */
+
+    /*         li:before { */
+    /*             content: '■'; */
+    /*             position: absolute; */
+    /*             left: -20px; */
+    /*             color: var(--accent); */
+    /*         } */
+
+    /*         ul { */
+
+    /*             li:before { */
+    /*                 content: '►'; */
+    /*                 position: absolute; */
+    /*                 left: -20px; */
+    /*                 color: var(--accent); */
+    /*             } */
+    /*         } */
+    /*     } */
+    /* } */
 }
