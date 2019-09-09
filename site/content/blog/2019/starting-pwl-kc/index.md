@@ -1,7 +1,7 @@
 +++
 title = "papers we love -> kcmo"
 description = "i want to start a technical group in kc and Papers We Love might be it."
-date=2019-09-06
+date=2019-09-08
 
 insert_anchor_links = "right"
 
