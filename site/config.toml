@@ -91,7 +91,7 @@ favicon = "favicon-96x96.png"
 
 # Set a custom preview image for your website when posted as a link.
 # Must be placed in root of static/ directory...
-og_preview_img = "it_me.jpg"
+og_preview_img = "generic_preview.jpg"
 
 # Copyright notice if desired. Defaults to 
 # copyright = ""
