@@ -8,6 +8,6 @@ template = "index_logs.html"
 
 # changelog.txt
 
-these logs contain a record over what things i have been working on, whether
-software, hobbies, or otherwise. there will be gaps and redactions for obvious
-reasons.
+these logs contain a record of my work and thoughts, transparent and exposed in
+the [inexorable light of
+information](http://criticaltheoryindex.org/assets/baudrillard%2C-jean-ecstasy-of-communication.pdf).

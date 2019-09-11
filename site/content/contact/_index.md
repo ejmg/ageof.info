@@ -28,7 +28,7 @@ active twitter presence around a year ago or so.
 
 ## where you may have met me in physical space
 
-- strange loop conf @ 2017, 2018, 2019 <soon>
+- strange loop conf @ 2017, 2018
 - icfp @ 2018
 - rust conf @ 2018
 - rust belt rust conf @ 2018, 2019 <soon>
