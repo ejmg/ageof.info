@@ -1,6 +1,16 @@
 {% import "_macros.html" as macros %}
 {% extends "index.html" %}
 
+{%- block title %}
+    <title>{{ section.title }} ：： {{ config.extra.author }}</title>
+    {# TODO: make some kind of social media linking, i guess? #}
+    {#%- include "snippets/social.html" %#}
+{%- endblock title -%}
+
+{%- block og_preview -%}
+    {{ macros::og_preview() }}
+{%- endblock og_preview -%}
+
 {%- block main -%}
     {{ macros::list_logs() }}
 {%- endblock main -%}
