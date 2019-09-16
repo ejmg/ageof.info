@@ -119,7 +119,7 @@
 {% endmacro list_pages %}
 
 {% macro list_logs() %}
-    <div class="posts">
+    <div class="posts logs">
         <div class="post on-list">
             <h1 class="post-title">
                 <a href="{{ section.permalink }}">{{ section.title }}</a>
@@ -132,7 +132,7 @@
         <ul>
             {%- for page in paginator.pages -%}
                 
-                <li class="tag-list logs">
+                <li class="tag-list log">
                     <h1 class="post-title log-title">
                         <a href="{{ page.permalink }}">{{ page.title }}</a>
                     </h1>
