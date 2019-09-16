@@ -117,7 +117,7 @@ table, th, td {
 }
 
 .logs {
-        /* TODO: fix ul listing for $logs page */
+    /* A hack, but it works and does what i need */
     ul {
         list-style: none;
 
@@ -136,6 +136,7 @@ table, th, td {
 }
 
 .log {
+    /* fix for preventing logs from breaking line weird */
     @media(max-width: $phone-max-width) {
         white-space: nowrap;
     }
