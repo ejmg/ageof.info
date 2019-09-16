@@ -117,37 +117,27 @@ table, th, td {
 }
 
 .logs {
+    /* A hack, but it works and does what i need */
+    ul {
+        list-style: none;
+
+        li:before {
+            content: '⦿';
+            vertical-align: 30%;
+            position: absolute;
+            left: -20px;
+            /* i am an expert of my craft and don't exactly why this looks off
+             * like this. assuming it's the relative title sizing i've
+             * copy and pasted into styling the log headers. */
+            bottom: -1px;
+            color: var(--accent);
+        }
+    }
+}
+
+.log {
+    /* fix for preventing logs from breaking line weird */
     @media(max-width: $phone-max-width) {
         white-space: nowrap;
     }
-    /* TODO: fix ul listing for $logs page     */
-    /* ul { */
-    /*     list-style: none; */
-
-    /*     li:before { */
-    /*         content: '⦿'; */
-    /*         position: absolute; */
-    /*         left: -20px; */
-    /*         color: var(--accent); */
-    /*     } */
-    /*     ul { */
-
-    /*         li:before { */
-    /*             content: '■'; */
-    /*             position: absolute; */
-    /*             left: -20px; */
-    /*             color: var(--accent); */
-    /*         } */
-
-    /*         ul { */
-
-    /*             li:before { */
-    /*                 content: '►'; */
-    /*                 position: absolute; */
-    /*                 left: -20px; */
-    /*                 color: var(--accent); */
-    /*             } */
-    /*         } */
-    /*     } */
-    /* } */
 }
