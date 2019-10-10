@@ -107,7 +107,7 @@ main_menu = [
               {url="/about/", name="$about"},
               {url="/contact/", name="$contact"},
               {url="/assets/pdfs/cv.pdf", name="$cv"},
-              {url="/logs/", name="$logs"},
+#              {url="/logs/", name="$logs"},
               {url="/readings/", name="$readings"},
 ]
 
