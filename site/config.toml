@@ -108,7 +108,7 @@ main_menu = [
               {url="/contact/", name="$contact"},
               {url="/assets/pdfs/cv.pdf", name="$cv"},
 #              {url="/logs/", name="$logs"},
-              {url="/readings/", name="$readings"},
+#              {url="/readings/", name="$readings"},
 ]
 
 # Displayed as title of drop-down menu when size of main_menu > show_menu_items.
