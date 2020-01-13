@@ -1,6 +1,6 @@
 +++
-title = ""
-description = "papers we love - kansas city is official"
+title = "papers we love kcmo is official"
+description = "updates on a bunch of midwesterners who like to read technical things"
 date = 2020-01-12
 
 insert_anchor_links = "right"
