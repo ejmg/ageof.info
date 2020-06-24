@@ -6,6 +6,8 @@
 # feels = 0
 +++
 
+# thoughts
+
 # work
 
 # non-work
