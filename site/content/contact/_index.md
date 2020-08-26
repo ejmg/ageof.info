@@ -3,7 +3,7 @@ title="contact"
 description = "contacting elias"
 
 [extra]
-date=2019-08-09
+date="2019-08-09"
 +++
 
 ## contacting[^1]
