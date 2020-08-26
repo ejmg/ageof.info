@@ -3,7 +3,7 @@ FROM buildpack-deps:bionic
 # MAINTAINER Aidan Coyne <coynea90@gmail.com>
 MAINTAINER elias garcia <elias.jm.garcia@gmail.com>
 
-ENV ZOLA_VERSION v0.8.0
+ENV ZOLA_VERSION v0.11.0
 
 #todo: AWS utilities
 
