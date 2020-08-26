@@ -2,7 +2,7 @@
 title = "about"
 
 [extra]
-date = 2019-08-10
+date = "2019-08-10"
 +++
 
 <div class="profile-pic">{{resize_image(path="about/hi.jpg", width=680, height=480, op="fit_width", quality=100)}}</div>
