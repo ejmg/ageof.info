@@ -1,7 +1,7 @@
 +++
 title = "readings"
 [extra]
-date = 2019-08-28
+date = "2019-08-28"
 +++
 
 on my old blog, i wrote a lot about what i read, whether articles or books. i
