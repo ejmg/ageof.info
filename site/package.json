@@ -9,6 +9,6 @@
         "build": "./zola --config now_config.toml build"
     },
     "dependencies": {
-        "serialize-javascript": "^2.1.1"
+        "serialize-javascript": "^3.1.0"
     }
 }
