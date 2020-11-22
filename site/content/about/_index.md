@@ -10,7 +10,10 @@ date = "2019-08-10"
 ## hola
 
 my name is elias julian marko garcia, and i am software engineer with a b.s. in
-computer science from [umkc](https://sce.umkc.edu/).
+computer science from [umkc](https://sce.umkc.edu/). i am currently employed
+with a computer software and security startup, Special Circumstances. our focus
+is on issues primarily related to the field of [language
+security](http://langsec.org/).
 
 people have described my background and demographic as non-traditional for
 computer science.
