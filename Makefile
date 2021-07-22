@@ -48,7 +48,7 @@ build-zola-docker:
 push-image-to-gl: build-zola-docker
 	docker push $(DOCKER_REPO)
 
-ZOLA_VERSION=v0.8.0
+ZOLA_VERSION=v0.13.0
 
 install-zola:
 	wget https://github.com/getzola/zola/releases/download/${ZOLA_VERSION}/zola-${ZOLA_VERSION}-x86_64-unknown-linux-gnu.tar.gz -O zola.tar.gz
